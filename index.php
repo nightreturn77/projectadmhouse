@@ -32,5 +32,5 @@ include('footer.php');
         </div>
 
     </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>
 </form>

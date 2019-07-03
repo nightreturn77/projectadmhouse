@@ -15,7 +15,12 @@ $sqlproduto = "insert into produto(nome,tipo,preco,validade,dataCompra)
 values('$nome','$tipo','$preco','$validade','$dataCompra')"; 
 
 if(mysqli_query($con, $sqlproduto)){ 
-echo "ok";
+include('header.php');
+include('footer.php');
+echo "Cadastrado com sucesso!"; 
+header("Refresh:3,index.php");
+echo "Você está sendo redirecionado";
+
 
 }else{ 
     echo "not ok";

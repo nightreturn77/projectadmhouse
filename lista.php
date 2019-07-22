@@ -23,7 +23,7 @@ include("header.php");
 
 include("connection.php");
 
-$query = "select * from produto";
+$query = "select * from produto where situacao = 'ativo'";
 $consulta = mysqli_query($con, $query);
 while($prod = mysqli_fetch_array($consulta)){
 
@@ -47,6 +47,7 @@ echo "<tr><td>$nome</td>
 <td>$quantidade</td>
 <td>$medida $tipoMedida</td>
 <td><a href='atualizarProduto.php?id=".$prod['idproduto']." '>Atualizar</a></td>
+<td><a href='deletarProduto.php?id=".$prod['idproduto']." '>Deletar</a></td>
 
 
 

@@ -34,6 +34,7 @@ $data = $prod['dataCompra'];
 $tipo = $prod['tipo'];
 $quantidade = $prod['quantidade'];
 $medida = $prod['medida'];
+$tipoMedida = $prod['tipoMedida'];
 
 
 
@@ -44,7 +45,7 @@ echo "<tr><td>$nome</td>
 <td>"; echo date('d/m/y',strtotime($data)); echo "</td>
 <td>$tipo</td>
 <td>$quantidade</td>
-<td>$medida L/KG</td>
+<td>$medida $tipoMedida</td>
 
 
 

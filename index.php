@@ -38,7 +38,17 @@ include('footer.php');
             <label for="dataproduto">Medida</label>
             <input type="number" class="form-control" id="dataproduto" name="medida">
         </div>
+        <div class="form-group col-md-6">
+      <label for="inputMedida">Tipo de Medida</label>
+      <select id="inputMedida" class="form-control" name="tipoMedida">
+        <option  >L</option>
+        <option >KG</option>
+        <option >G</option>
+        <option >Ml</option>
+      </select>
 
     </div>
+    <div class="col-md-12">
     <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>
+    <div>
 </form>

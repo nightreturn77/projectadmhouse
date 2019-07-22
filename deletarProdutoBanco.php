@@ -14,7 +14,7 @@ if(mysqli_query($con, $sqlproduto)){
 include('header.php');
 include('footer.php');
 echo "Alterado com sucesso!"; 
-header("Refresh:3,index.php");
+header("Refresh:2,lista.php");
 echo "Você está sendo redirecionado";
 
 

@@ -2,6 +2,7 @@
 include("header.php");
 
 ?>
+<div class="container-fluid" id="backpage">
 <table class="table">
 <h1 class="mt-4">Lista de Produtos</h1>
 <tr>
@@ -60,6 +61,7 @@ echo "<tr><td>$nome</td>
 
 
 </table>
+</div>
 <?php
 
 include("footer.php");

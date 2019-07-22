@@ -46,6 +46,7 @@ echo "<tr><td>$nome</td>
 <td>$tipo</td>
 <td>$quantidade</td>
 <td>$medida $tipoMedida</td>
+<td><a href='atualizarProduto.php?id=".$prod['idproduto']." '>Atualizar</a></td>
 
 
 

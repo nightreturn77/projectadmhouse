@@ -11,6 +11,8 @@ include("header.php");
 <th>Validade</th>
 <th>Data da Compra</th>
 <th>Tipo do Produto</th>
+<th>Quantidade</th>
+<th>Medida</th>
 
 
 
@@ -30,15 +32,19 @@ $preco = $prod['preco'];
 $validade = $prod['validade'];
 $data = $prod['dataCompra'];
 $tipo = $prod['tipo'];
+$quantidade = $prod['quantidade'];
+$medida = $prod['medida'];
 
 
 
 
 echo "<tr><td>$nome</td>
-<td>$preco</td>
-<td>$validade</td>
-<td>$data</td>
+<td>R$ $preco</td>
+<td>", date('d/m/y',strtotime($validade)), "</td>
+<td>"; echo date('d/m/y',strtotime($data)); echo "</td>
 <td>$tipo</td>
+<td>$quantidade</td>
+<td>$medida L/KG</td>
 
 
 

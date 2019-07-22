@@ -7,12 +7,14 @@ $tipo = $_POST['tipo'];
 $preco = $_POST['preco'];
 $validade = $_POST['validade'];
 $dataCompra = $_POST['dataCompra'];
+$quantidade = $_POST['quantidade'];
+$medida = $_POST['medida'];
 
 
 include('connection.php');
 
-$sqlproduto = "insert into produto(nome,tipo,preco,validade,dataCompra) 
-values('$nome','$tipo','$preco','$validade','$dataCompra')"; 
+$sqlproduto = "insert into produto(nome,tipo,preco,validade,dataCompra,quantidade,medida) 
+values('$nome','$tipo','$preco','$validade','$dataCompra','$quantidade','$medida')"; 
 
 if(mysqli_query($con, $sqlproduto)){ 
 include('header.php');

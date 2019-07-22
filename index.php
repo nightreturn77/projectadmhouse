@@ -30,6 +30,14 @@ include('footer.php');
             <label for="dataproduto">Data da Compra</label>
             <input type="date" class="form-control" id="dataproduto" name="dataCompra">
         </div>
+        <div class="form-group col-md-6">
+            <label for="dataproduto">Quantidade</label>
+            <input type="number" class="form-control" id="dataproduto" name="quantidade">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="dataproduto">Medida</label>
+            <input type="number" class="form-control" id="dataproduto" name="medida">
+        </div>
 
     </div>
     <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>

@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <title>Banco Home</title>
   </head>
-  <body>
+  <body class="container">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php">Banco Home</a>

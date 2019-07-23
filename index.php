@@ -32,11 +32,11 @@ include('footer.php');
         </div>
         <div class="form-group col-md-6">
             <label for="dataproduto">Quantidade</label>
-            <input type="number" class="form-control" id="dataproduto" name="quantidade">
+            <input type="number" class="form-control" id="dataproduto" name="quantidade" placeholder="Digite a quantidade">
         </div>
         <div class="form-group col-md-6">
             <label for="dataproduto">Medida</label>
-            <input type="number" class="form-control" id="dataproduto" name="medida">
+            <input type="number" class="form-control" id="dataproduto" name="medida" placeholder="Digite medida">
         </div>
         <div class="form-group col-md-6">
       <label for="inputMedida">Tipo de Medida</label>
@@ -46,7 +46,21 @@ include('footer.php');
         <option >G</option>
         <option >Ml</option>
       </select>
-
+    </div>
+    <div class="form-group col-md-6">
+    <label for="dataproduto">Mercado ou Estabelecimento</label>
+    <select name="mercado" id="" class="form-control">
+        <option value="todos">Selectione o mercado/estabelecimento </option>
+        <?php
+            include "connection.php";
+            $query = "select * from mercado";
+            $consulta = mysqli_query($con, $query);
+            while($m = mysqli_fetch_array($consulta)){
+                $mercado = $m['nome'];
+                echo "<option value='$mercado'>$mercado</option>";
+            }
+        ?>
+</select>
     </div>
     <div class="col-md-12">
     <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>

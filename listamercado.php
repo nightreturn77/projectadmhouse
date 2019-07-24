@@ -1,10 +1,15 @@
 <?php
+include("connection.php");
 include("header.php");
-
+$idmercado = $_GET['id'];
+$query2 = "select * from mercado where idMercado = $idmercado";
+$consult = mysqli_query($con, $query2);
+$array = mysqli_fetch_array($consult);
+$nomemercado = $array['nome'];
 ?>
 <div class="container-fluid" id="backpage">
 <table class="table">
-<h1 class="mt-4">Lista de Produtos</h1>
+<h1 class="mt-4">Lista de Produtos <?php echo $nomemercado; ?></h1>
 <tr>
 
 <th>Nome</th>
@@ -22,9 +27,11 @@ include("header.php");
 
 <?php
 
-include("connection.php");
 
-$query = "select * from produto where situacao = 'ativo'";
+
+
+$query = "select * from produto where situacao = 'ativo' and idMercado = $idmercado";
+
 $consulta = mysqli_query($con, $query);
 while($prod = mysqli_fetch_array($consulta)){
 
@@ -78,7 +85,7 @@ echo '<!-- Modal -->
       <div class="modal-body">
       <div class="form-group col-md-12">
       <label for="dataproduto">NOME:</label>
-            <label for="dataproduto"><a href="listamercado.php?id='.$idmercado.'">'.$nomemercado.'</a></label>
+            <label for="dataproduto"><a href="listamercado.php">'.$nomemercado.'</a></label>
         </div>
         <div class="form-group col-md-12">
       <label for="dataproduto">LOGRADOURO:</label>

@@ -11,12 +11,19 @@ $dataCompra = $_POST['dataCompra'];
 $quantidade = $_POST['quantidade'];
 $medida = $_POST['medida'];
 $tipoMedida = $_POST['tipoMedida'];
-
-
+$mercado = $_POST['mercado'];
 include('connection.php');
 
+$searchid = "select * from mercado where nome = '$mercado'";
+$consult = mysqli_query($con, $searchid);
+$search = mysqli_fetch_array($consult);
+$idmercado = $search['idMercado'];
+
+
+
+
 $sqlproduto = "UPDATE produto set nome = '$nome', tipo='$tipo', preco='$preco', validade='$validade', 
-dataCompra='$dataCompra',quantidade='$quantidade',medida='$medida',tipoMedida='$tipoMedida' where idproduto = $id "; 
+dataCompra='$dataCompra',quantidade='$quantidade',medida='$medida',tipoMedida='$tipoMedida', idMercado = '$idmercado' where idproduto = $id "; 
 
 if(mysqli_query($con, $sqlproduto)){ 
 include('header.php');

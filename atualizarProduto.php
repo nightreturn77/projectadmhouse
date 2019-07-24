@@ -60,6 +60,20 @@ echo '
         <option >G</option>
         <option >Ml</option>
       </select>
+      <div class="form-group col-md-6">
+    <label for="dataproduto">Mercado ou Estabelecimento</label>
+    <select name="mercado" id="" class="form-control">
+        <option value="todos">Selectione o mercado/estabelecimento </option>
+            ';
+            $query = "select * from mercado";
+            $consulta = mysqli_query($con, $query);
+            while($m = mysqli_fetch_array($consulta)){
+                $mercado = $m['nome'];
+                echo "<option value='$mercado'>$mercado</option>";
+            }
+        echo '
+</select>
+    </div>
 
     </div>
     <div class="col-md-12">
@@ -70,6 +84,5 @@ echo '
 
 
 
-
-'
+';
 ?>

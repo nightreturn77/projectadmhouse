@@ -62,8 +62,8 @@ echo '
       </select>
       <div class="form-group col-md-6">
     <label for="dataproduto">Mercado ou Estabelecimento</label>
-    <select name="mercado" id="" class="form-control">
-        <option value="todos">Selectione o mercado/estabelecimento </option>
+    <select name="mercado" id="" class="form-control" required>
+        <option value="">Selectione o mercado/estabelecimento </option>
             ';
             $query = "select * from mercado";
             $consulta = mysqli_query($con, $query);

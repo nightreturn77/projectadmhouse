@@ -6,13 +6,12 @@ include('footer.php');
 
 
 ?>
-
 <h2>Cadastrar produtos</h2>
 <form action="cadastrar.php" method="POST">
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="nomeproduto">Nome</label>
-            <input type="text" class="form-control" id="nomeproduto" placeholder="Nome" name="nome">
+            <input type="text" class="form-control" id="nomeproduto" placeholder="Nome" name="nome" required>
         </div>
         <div class="form-group col-md-6">
             <label for="tipoproduto">Tipo</label>
@@ -49,8 +48,8 @@ include('footer.php');
     </div>
     <div class="form-group col-md-6">
     <label for="dataproduto">Mercado ou Estabelecimento</label>
-    <select name="mercado" id="" class="form-control">
-        <option value="todos">Selectione o mercado/estabelecimento </option>
+    <select name="mercado" id="" class="form-control" required>
+        <option value="">Selectione o mercado/estabelecimento </option>
         <?php
             include "connection.php";
             $query = "select * from mercado";

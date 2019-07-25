@@ -32,10 +32,54 @@
       <li class="nav-item">
         <a class="nav-link" href="listaestabelecimento.php">Lista de Estabelecimentos</a>
       </li>
+      <?php 
+      include('connection.php');
+      session_start();
+      if(!isset($_SESSION['login'])){
+      echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Login
+    </button>';
+      }else{
+        echo '<button type="button" class="btn btn-primary">
+      '.$_SESSION['login'].'
+    </button>';
+
+      }
+?>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
   </div>
 </nav>
+
+<!-- Modal Login -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Área de Acesso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form method="post" action="session.php">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Login</label>
+    <input name="login" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Senha</label>
+    <input name="senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group form-check">
+  </div>
+  <button type="submit" class="btn btn-primary" name="logar">Logar</button>
+</form>
+      </div>
+
+    </div>
+  </div>
+</div>

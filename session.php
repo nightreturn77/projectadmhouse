@@ -24,7 +24,7 @@ $sqlarray = mysqli_fetch_array($consultausuario);
  if($sqlarray['login'] == $login && $sqlarray['senha'] == $senha){ 
      $_SESSION['login'] =  $login;
      echo '<script>alert("Login efetuado com sucesso!");</script>';
-    header('refresh: 3, index.php');
+    header('location: index.php');
      
      
  }else {

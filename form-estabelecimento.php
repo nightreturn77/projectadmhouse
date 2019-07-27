@@ -1,11 +1,3 @@
-<?php
-
-include('header.php');
-include('footer.php');
-
-
-
-?>
 
 <h2>Cadastrar  Estabelecimentos</h2>
 <form action="cadastrar-estabelecimento.php" method="POST">

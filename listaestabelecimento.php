@@ -1,7 +1,3 @@
-<?php
-include("header.php");
-
-?>
 <div class="container-fluid" id="backpage">
 <table class="table">
 <h1 class="mt-4">Lista de de Estabelecimentos</h1>
@@ -38,9 +34,4 @@ echo "<tr><td>$nome</td>
 
 }
 
-?>
-
-<?php
-
-include("footer.php");
 ?>

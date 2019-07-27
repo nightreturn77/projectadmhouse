@@ -1,7 +1,3 @@
-<?php
-include("header.php");
-
-?>
 <div class="container-fluid" id="backpage">
 <table class="table">
 <h1 class="mt-4">Lista de Produtos</h1>
@@ -104,12 +100,6 @@ echo '<!-- Modal -->
 
 </table>
 </div>
-<?php
-
-include("footer.php");
-?>
-
-
 
 
 

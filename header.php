@@ -36,21 +36,28 @@
       include('connection.php');
       session_start();
       if(!isset($_SESSION['login'])){
-      echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-      Login
-    </button>';
+        echo '<li class="nav-item"><button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Login
+      </button></li>';
+      
       }else{
-        echo '<button type="button" class="btn btn-primary">
+        echo '<li class="nav-item" ><button type="button" class="btn btn-primary">
       '.$_SESSION['login'].'
-    </button>';
+    </button></li>';
 
       }
 ?>
+<?php 
+if(isset($_SESSION['login'])){
+echo '<li class="nav-item">';
+echo '<a href="logout.php" ><button type="button" class="btn btn-primary">
+      Logout
+    </button></a>';
+  echo "</li>";
+
+}
+?>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
   </div>
 </nav>
 

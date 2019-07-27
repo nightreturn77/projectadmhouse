@@ -1,5 +1,5 @@
 <?php 
-
+include("header.php");
 if(isset($_POST['cadastrar'])){
 
 $nome = $_POST['nome']; 
@@ -71,8 +71,6 @@ $sqlproduto = "insert into produto(nome,tipo,preco,validade,dataCompra,quantidad
 values('$nome','$tipo','$preco','$validade','$dataCompra','$quantidade','$medida','$tipoMedida','$situacao','$idmercado')"; 
 
 if(mysqli_query($con, $sqlproduto)){ 
-include('header.php');
-include('footer.php');
 echo "Cadastrado com sucesso!"; 
 header("Refresh:3,index.php");
 echo "Você está sendo redirecionado";
@@ -96,7 +94,7 @@ echo "Você está sendo redirecionado";
 
 
 
-
+include("footer.php");
 
 
 ?>

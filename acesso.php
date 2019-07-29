@@ -1,6 +1,5 @@
 <?php 
 include('header.php');
-include('footer.php');
 
 ?>
 <h2>Faça o seu login aqui!</h2>
@@ -17,3 +16,10 @@ include('footer.php');
   <button type="submit" class="btn btn-primary" name="logar">Logar</button>
 </form>
 </div>
+
+
+<?php
+
+include('footer.php');
+
+?>

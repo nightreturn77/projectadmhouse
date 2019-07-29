@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-include('footer.php');
+
 
 
 
@@ -36,3 +36,9 @@ include('footer.php');
     <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>
     <div>
 </form>
+
+<?php 
+
+include('footer.php');
+
+?>

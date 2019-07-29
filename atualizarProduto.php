@@ -1,6 +1,5 @@
 <?php 
 include('header.php');
-include('footer.php');
 include('connection.php');
 $id= $_GET['id'];
 $query = "select * FROM produto where idproduto = $id";
@@ -85,4 +84,5 @@ echo '
 
 
 ';
+include('footer.php');
 ?>

@@ -1,4 +1,18 @@
 
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: 
+    <a href="#"> Banco Home</a>
+    <p>Beta V3.4.29072019</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

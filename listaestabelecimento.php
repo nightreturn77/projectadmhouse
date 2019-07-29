@@ -9,7 +9,6 @@
 <th>CEP</th>
 
 
-
 </tr>
 
 
@@ -38,4 +37,10 @@ echo "<tr><td>$nome</td>
 
 }
 
+$testando = 1;
+
 ?>
+
+</tbody>
+</table>
+</div>

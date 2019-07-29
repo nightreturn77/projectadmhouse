@@ -15,16 +15,20 @@
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <title>Banco Home</title>
   </head>
-  <body class="container-fluid h-100 d-inline-block mh-100">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  <body class="container">
+    <div class="cover">
+  <a href="index.php"><img class="rounded mx-auto d-block"src="img/logo2.png" alt="logo.jpg" title="Banco Home"/>
+  </a>
+</div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light menuradius " id="menu">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item active">
+  <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mx-auto font-weight-bold">
+      <li class="nav-item">
         <a class="nav-link" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item">
@@ -40,7 +44,9 @@
         <a class="nav-link" href="acesso.php">Login</a>
       </li>';
       
-      }else{
+      }else {
+        $tipo = $_SESSION['tipoUsuario'];
+      if($tipo == 1){
         echo '<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-uppercase active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           '.$_SESSION['login'].'
@@ -55,6 +61,23 @@
         </div>
       </li>';
 
+      }else{ 
+        echo '<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-uppercase active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          '.$_SESSION['login'].'
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="CadastroDeProdutos.php">Cadastro de Produtos</a>
+          <a class="dropdown-item" href="ListagemDeProdutos.php">Meus Produtos</a>
+          <a class="dropdown-item" href="Listausuario.php">Usuários</a>
+          <a class="dropdown-item" href="CadastroDeEstabelecimento.php">Cadastro de Estabelecimentos</a>
+          <a class="dropdown-item" href="ListagemDeEstabelecimento.php">Lista de Estabelecimentos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="logout.php">Sair</a>
+        </div>
+      </li>';
+
+      }
       }
 ?>
     </ul>
@@ -90,4 +113,4 @@
     </div>
   </div>
 </div>
-<div class="container">
+<div class="container cover container2" id="corpo">

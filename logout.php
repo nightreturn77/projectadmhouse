@@ -1,8 +1,8 @@
 <?php 
-session_start();
+include('header.php');
 session_destroy();
-header('refresh:3, index.php');
-echo "Você está sendo redirecionado";
-
+echo '<script>alert("Você foi desconectado");</script>';
+echo '<script>window.location.href = "index.php";</script>';
+include('footer.php');
 
 ?>

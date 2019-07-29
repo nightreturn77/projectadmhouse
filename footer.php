@@ -2,12 +2,12 @@
 </div>
 
 <!-- Footer -->
-<footer class="page-footer font-small blue">
+<footer class="page-footer font-small blue font-weight-bold card-header menuradius " id="menu">
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2019 Copyright: 
     <a href="#"> Banco Home</a>
-    <p>Beta V3.4.29072019</p>
+    <p>Beta V4.0.29072019</p>
   </div>
   <!-- Copyright -->
 

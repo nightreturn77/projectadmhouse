@@ -46,6 +46,7 @@
         <option >Ml</option>
       </select>
     </div>
+    </div>
     <div class="form-group col-md-6">
     <label for="dataproduto">Mercado ou Estabelecimento</label>
     <select name="mercado" id="" class="form-control" required>
@@ -63,5 +64,5 @@
     </div>
     <div class="col-md-12">
     <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>
-    <div>
+        </div>
 </form>

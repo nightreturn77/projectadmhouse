@@ -17,8 +17,7 @@ values('$nome','$logradouro','$numero','$cep','$id')";
 
 if(mysqli_query($con, $sqlproduto)){ 
 echo "Cadastrado com sucesso!"; 
-//echo '<script>window.location.href = "index.php";</script>';
-echo "Você está sendo redirecionado";
+echo '<script>window.location.href = "index.php";</script>';
 
 
 }else{ 

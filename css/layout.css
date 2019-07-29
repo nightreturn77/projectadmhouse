@@ -1,0 +1,32 @@
+#menu{ 
+    background-image: linear-gradient(white, #1761a0 );
+background-color: #1761a0 !important;
+
+
+
+}
+.cover{ 
+    background-image: linear-gradient(white, #a0c1de );
+background-color: #a0c1de !important;
+
+
+}
+
+.menuradius{ 
+
+border-radius: 25px 25px;
+
+
+}
+
+.container2{ 
+height:980px !important;
+
+
+}
+body{
+    background-image: url(../img/BANCO\ HOME.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}

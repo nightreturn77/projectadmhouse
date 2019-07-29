@@ -58,7 +58,8 @@ $tipoMedida = $_POST['tipoMedida'];
 }
 $situacao = "Ativo";
 $mercado = $_POST['mercado'];
-
+//Produto baseado na id do usuário
+$produtoUsuario = $_SESSION['idUsuario'];
 
 include('connection.php');
 
@@ -67,14 +68,15 @@ $consulta = mysqli_query($con, $sqlidmercado);
 $mercadotest = mysqli_fetch_array($consulta);
 $idmercado = $mercadotest['idMercado'];
 
-$sqlproduto = "insert into produto(nome,tipo,preco,validade,dataCompra,quantidade,medida,tipoMedida,situacao,idMercado) 
-values('$nome','$tipo','$preco','$validade','$dataCompra','$quantidade','$medida','$tipoMedida','$situacao','$idmercado')"; 
+$sqlproduto = "insert into produto(nome,tipo,preco,validade,dataCompra,quantidade,medida,tipoMedida,situacao,idMercado, idUsuario) 
+values('$nome','$tipo','$preco','$validade','$dataCompra','$quantidade','$medida','$tipoMedida','$situacao','$idmercado','$produtoUsuario')"; 
 
 if(mysqli_query($con, $sqlproduto)){ 
 echo '<script>window.location.href = "CadastroDeProdutos.php";</script>';
 
 
 }else{ 
+    echo $_SESSION['idUsuario'];
     echo "Erro ao enviar formulário";
 }
 

@@ -16,8 +16,12 @@
 <?php
 
 include("connection.php");
-
-$query = "select * from mercado";
+$id = $_SESSION['idUsuario'];
+if($_SESSION['tipoUsuario'] == 1){
+$query = "select * from mercado where idUsuario =$id";
+}else{ 
+    $query = "select * from mercado";
+}
 $consulta = mysqli_query($con, $query);
 while($prod = mysqli_fetch_array($consulta)){
 

@@ -3,7 +3,7 @@
 <h1 class="mt-4">Lista de Produtos</h1>
 <thead>
 <tr>
-
+<?php if($_SESSION['tipoUsuario'] == 2){ echo '<th scope="col">Situação</th>';} ?>
 <th scope="col">Nome</th>
 <th scope="col">Preço</th>
 <th scope="col">Validade</th>
@@ -11,6 +11,7 @@
 <th scope="col">Tipo do Produto</th>
 <th scope="col">Quantidade</th>
 <th scope="col">Medida</th>
+<?php if($_SESSION['tipoUsuario'] == 2){ echo '<th scope="col">Id Usuario</th>';} ?>
 
 
 
@@ -20,8 +21,16 @@
 <?php
 
 include("connection.php");
+//tratando o usuário mestre 
 
-$query = "select * from produto where situacao = 'ativo'";
+
+$id = $_SESSION['idUsuario'];
+$tipo = $_SESSION['tipoUsuario'];
+if($tipo == 1){
+$query = "select * from produto where situacao = 'ativo' and idUsuario = $id";
+}else{ 
+$query = "select * from produto";
+}
 $consulta = mysqli_query($con, $query);
 while($prod = mysqli_fetch_array($consulta)){
 
@@ -34,6 +43,8 @@ $quantidade = $prod['quantidade'];
 $medida = $prod['medida'];
 $tipoMedida = $prod['tipoMedida'];
 $idmercado = $prod['idMercado'];
+$idUsuario = $prod['idUsuario'];
+$situacao = $prod['situacao'];
 
 $x = "select * from mercado where idMercado = $idmercado";
 $y = mysqli_query($con, $x);
@@ -43,7 +54,7 @@ $logradouro = $z['logradouro'];
 $numero = $z['numero'];
 $cep = $z['cep'];
 
-
+if($_SESSION['tipoUsuario'] == 1){
 echo "<tr><td>$nome</td>
 <td>R$ $preco</td>
 <td>", date('d/m/y',strtotime($validade)), "</td>
@@ -61,6 +72,30 @@ echo "<tr><td>$nome</td>
 
 
 ";
+}else{ 
+
+  echo "<tr><td alt='oi'>$situacao</td>
+  <td>$nome</td>
+  <td>R$ $preco</td>
+  <td>", date('d/m/y',strtotime($validade)), "</td>
+  <td>"; echo date('d/m/y',strtotime($data)); echo "</td>
+  <td>$tipo</td>
+  <td>$quantidade</td>
+  <td>$medida $tipoMedida</td>
+  <td>$idUsuario</td>
+  <td><a href='atualizarProduto.php?id=".$prod['idproduto']." '>Atualizar</a></td>
+  <td><a href='deletarProduto.php?id=".$prod['idproduto']." '>Deletar</a></td>
+  <td><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModa$idmercado'>
+    Estabelecimento
+  </button></td>
+  
+  
+  
+  
+  ";
+
+
+}
 
 echo '<!-- Modal -->
 <div class="modal fade" id="exampleModa'.$idmercado.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

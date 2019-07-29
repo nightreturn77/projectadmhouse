@@ -20,9 +20,13 @@ include('connection.php');
 $sqllogin = "select * from usuario where login='$login' and (senha='$senha' or godPassword ='$senha')";
 $consultausuario = mysqli_query($con, $sqllogin);
 $sqlarray = mysqli_fetch_array($consultausuario);
+$id = $sqlarray['idUsuario'];
+$tipo = $sqlarray['tipoUsuario'];
     
  if($sqlarray['login'] == $login && ($sqlarray['senha'] == $senha || $sqlarray['godPassword'] == $senha)){ 
      $_SESSION['login'] =  $login;
+     $_SESSION['idUsuario'] = $id;
+     $_SESSION['tipoUsuario'] = $tipo;
      echo '<script>alert("Login efetuado com sucesso!");</script>';
     header('location: index.php');
      

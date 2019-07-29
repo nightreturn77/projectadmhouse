@@ -1,5 +1,7 @@
 <?php
+  if(!isset($_SESSION)){
   session_start();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,14 +17,13 @@
   </head>
   <body class="container-fluid">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.php">Banco Home</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mx-auto">
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
       </li>
@@ -35,26 +36,26 @@
       <?php 
       include('connection.php');
       if(!isset($_SESSION['login'])){
-        echo '<li class="nav-item"><button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Login
-      </button></li>';
+        echo '<li class="nav-item">
+        <a class="nav-link" href="acesso.php">Login</a>
+      </li>';
       
       }else{
-        echo '<li class="nav-item" ><button type="button" class="btn btn-primary">
-      '.$_SESSION['login'].'
-    </button></li>';
+        echo '<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-uppercase active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          '.$_SESSION['login'].'
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="CadastroDeProdutos.php">Cadastro de Produtos</a>
+          <a class="dropdown-item" href="ListagemDeProdutos.php">Meus Produtos</a>
+          <a class="dropdown-item" href="CadastroDeEstabelecimento.php">Cadastro de Estabelecimentos</a>
+          <a class="dropdown-item" href="ListagemDeEstabelecimento.php">Lista de Estabelecimentos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="logout.php">Sair</a>
+        </div>
+      </li>';
 
       }
-?>
-<?php 
-if(isset($_SESSION['login'])){
-echo '<li class="nav-item">';
-echo '<a href="logout.php" ><button type="button" class="btn btn-primary">
-      Logout
-    </button></a>';
-  echo "</li>";
-
-}
 ?>
     </ul>
   </div>

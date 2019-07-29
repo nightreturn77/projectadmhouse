@@ -28,7 +28,7 @@ dataCompra='$dataCompra',quantidade='$quantidade',medida='$medida',tipoMedida='$
 if(mysqli_query($con, $sqlproduto)){ 
 include('header.php');
 include('footer.php'); 
-header("location: ListagemDeProdutos.php");
+echo '<script>window.location.href = "ListagemDeProdutos.php";</script>';
 
 
 

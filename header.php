@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -21,20 +24,16 @@
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="CadastroDeProdutos.php">Cadastro de Produtos <span class="sr-only">(página atual)</span></a>
+        <a class="nav-link" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="ListagemDeProdutos.php">Lista de Produtos</a>
+        <a class="nav-link" href="form-usuario.php">Cadastre-se</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="CadastroDeEstabelecimento.php">Cadastro de Estabelecimentos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="ListagemDeEstabelecimento.php">Lista de Estabelecimentos</a>
+        <a class="nav-link" href="Sobre.php">Sobre</a>
       </li>
       <?php 
       include('connection.php');
-      session_start();
       if(!isset($_SESSION['login'])){
         echo '<li class="nav-item"><button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         Login

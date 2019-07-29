@@ -71,9 +71,7 @@ $sqlproduto = "insert into produto(nome,tipo,preco,validade,dataCompra,quantidad
 values('$nome','$tipo','$preco','$validade','$dataCompra','$quantidade','$medida','$tipoMedida','$situacao','$idmercado')"; 
 
 if(mysqli_query($con, $sqlproduto)){ 
-echo "Cadastrado com sucesso!"; 
-header("Refresh:3,index.php");
-echo "Você está sendo redirecionado";
+echo '<script>window.location.href = "CadastroDeProdutos.php";</script>';
 
 
 }else{ 

@@ -1,21 +1,22 @@
 <div class="container-fluid" id="backpage">
 <table class="table">
 <h1 class="mt-4">Lista de Produtos</h1>
+<thead>
 <tr>
 
-<th>Nome</th>
-<th>Preço</th>
-<th>Validade</th>
-<th>Data da Compra</th>
-<th>Tipo do Produto</th>
-<th>Quantidade</th>
-<th>Medida</th>
+<th scope="col">Nome</th>
+<th scope="col">Preço</th>
+<th scope="col">Validade</th>
+<th scope="col">Data da Compra</th>
+<th scope="col">Tipo do Produto</th>
+<th scope="col">Quantidade</th>
+<th scope="col">Medida</th>
 
 
 
 </tr>
-
-
+</thead>
+<tbody>
 <?php
 
 include("connection.php");
@@ -97,7 +98,7 @@ echo '<!-- Modal -->
 
 ?>
 
-
+</tbody>
 </table>
 </div>
 

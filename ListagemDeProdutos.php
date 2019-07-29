@@ -7,7 +7,7 @@ if(isset($_SESSION['login'])){
 
     include('lista.php');
 }else{ 
-    header('location: acesso.php');
+    echo '<script>window.location.href = "acesso.php";</script>';
 }
 
 

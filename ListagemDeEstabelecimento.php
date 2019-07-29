@@ -9,7 +9,7 @@ include('listaestabelecimento.php');
 
 
 }else{ 
-    header('location: acesso.php');
+    echo '<script>window.location.href = "acesso.php";</script>';
 }
 
 

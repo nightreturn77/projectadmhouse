@@ -17,7 +17,7 @@ if(mysqli_query($con, $sqlproduto)){
 include('header.php');
 include('footer.php');
 echo "Cadastrado com sucesso!"; 
-header("Refresh:3,index.php");
+echo '<script>window.location.href = "index.php";</script>';
 echo "Você está sendo redirecionado";
 
 

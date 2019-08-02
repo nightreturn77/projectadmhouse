@@ -7,7 +7,7 @@
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2019 Copyright: 
     <a href="#"> Banco Home</a>
-    <p>Beta V4.0.29072019</p>
+    <p>Final v1.0.02082019</p>
   </div>
   <!-- Copyright -->
 

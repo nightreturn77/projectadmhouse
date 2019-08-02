@@ -14,7 +14,7 @@ if(isset($_POST['cadastrar'])){
     $queryrepeat = "select * from usuario where login = '$login'";
     $consult = mysqli_query($con, $queryrepeat);
     $repeat = mysqli_fetch_array($consult);
-  
+    
 
 
     if($login != $repeat['login']){
@@ -26,7 +26,7 @@ if(isset($_POST['cadastrar'])){
     }else{ 
         echo "not ok";
     }
-}else if($repeat['situacao'] == "excluido"){ 
+}else if($repeat['situacao'] != $situacao){ 
     $query = "insert into usuario(nome,idade,email,login,senha,godPassword,tipoUsuario,situacao) values('$nome','$idade',
     '$email','$login','$senha','$god',$tipo,'$situacao')";
 

@@ -2,7 +2,7 @@
 session_start();
 
 if(empty($_POST['login']) || empty($_POST['senha'])){
-header('location: index.php');
+        echo '<script>window.location.href = "https://bhome-residencial.000webhostapp.com/";</script>';
 exit();
 
 
@@ -14,7 +14,7 @@ exit();
 if(isset($_POST['logar'])){ 
 
 $login = $_POST['login'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 include('connection.php'); 
 
 $sqllogin = "select * from usuario where situacao = 'ativo' and (login='$login' and (senha='$senha' or godPassword ='$senha'))";
@@ -30,12 +30,16 @@ $nome = $sqlarray['nome'];
      $_SESSION['tipoUsuario'] = $tipo;
      $_SESSION['nome'] = $nome;
      echo '<script>alert("Login efetuado com sucesso!");</script>';
-    header('location: index.php');
+     echo '<script>window.location.href = "index.php";</script>';
+     //echo '<script>window.location.href = "https://bhome-residencial.000webhostapp.com/";</script>';
+
      
      
  }else {
-     echo $senha;
-     //header('location: index.php');
+echo '<script>alert("Senha ou Login incorretos!");</script>';
+
+echo '<script>window.location.href = "https://bhome-residencial.000webhostapp.com/";</script>';
+
  }  
     
     

@@ -73,11 +73,15 @@ values('$nome','$tipo','$preco','$validade','$dataCompra','$quantidade','$medida
 
 if(mysqli_query($con, $sqlproduto)){ 
 echo '<script>window.location.href = "CadastroDeProdutos.php";</script>';
+//echo '<script>window.location.href = "https://bhome-residencial.000webhostapp.com/CadastroDeProdutos.php";</script>';
 
 
 }else{ 
-    echo $_SESSION['idUsuario'];
+
     echo "Erro ao enviar formulário";
+    echo '<script>window.location.href = "index.php";</script>';
+    //echo '<script>window.location.href = "https://bhome-residencial.000webhostapp.com/";</script>';
+
 }
 
 

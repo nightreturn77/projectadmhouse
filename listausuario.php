@@ -39,7 +39,6 @@ echo "<tr><td>$id</td>
 <td>$email</td>
 <td>$login</td>
 <td>$situacao</td>
-<td><a href='atualizarProduto.php?id=".$id." '>Atualizar</a></td>
 <td><a href='deletarUsuario.php?id=".$id." '>Deletar</a></td>
 
 

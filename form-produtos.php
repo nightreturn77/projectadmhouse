@@ -15,45 +15,45 @@
         </div>
         <div class="form-group col-md-6">
             <label for="tipoproduto">Tipo</label>
-            <input type="text" class="form-control" id="tipoproduto" placeholder="Tipo" name="tipo">
+            <input type="text" class="form-control" id="tipoproduto" placeholder="Tipo" name="tipo" required>
         </div>
         <div class="form-group col-md-6">
             <label for="precoproduto">Preço</label>
-            <input type="text" class="form-control" id="precoproduto" placeholder="Preço" name="preco">
+            <input type="text" class="form-control" id="precoproduto" placeholder="Preço" name="preco" required>
         </div>
         <div class="form-group col-md-6">
             <label for="validadeproduto">Validade</label>
-            <input type="date" class="form-control" id="validadeproduto" name="validade">
+            <input type="date" class="form-control" id="validadeproduto" name="validade" required>
         </div>
         <div class="form-group col-md-6">
             <label for="dataproduto">Data da Compra</label>
-            <input type="date" class="form-control" id="dataproduto" name="dataCompra">
+            <input type="date" class="form-control" id="dataproduto" name="dataCompra" required>
         </div>
         <div class="form-group col-md-6">
             <label for="dataproduto">Quantidade</label>
-            <input type="number" class="form-control" id="dataproduto" name="quantidade" placeholder="Digite a quantidade">
+            <input type="number" class="form-control" id="dataproduto" name="quantidade" placeholder="Digite a quantidade" required>
         </div>
         <div class="form-group col-md-6">
             <label for="dataproduto">Medida</label>
-            <input type="number" class="form-control" id="dataproduto" name="medida" placeholder="Digite medida">
+            <input type="number" class="form-control" id="dataproduto" name="medida" placeholder="Digite medida" required>
         </div>
         <div class="form-group col-md-6">
       <label for="inputMedida">Tipo de Medida</label>
-      <select id="inputMedida" class="form-control" name="tipoMedida">
+      <select id="inputMedida" class="form-control" name="tipoMedida" required>
         <option  >L</option>
         <option >KG</option>
         <option >G</option>
         <option >Ml</option>
       </select>
     </div>
-    </div>
+    
     <div class="form-group col-md-6">
     <label for="dataproduto">Mercado ou Estabelecimento</label>
     <select name="mercado" id="" class="form-control" required>
         <option value="">Selectione o mercado/estabelecimento </option>
         <?php
             include "connection.php";
-            $query = "select * from mercado";
+            $query = "select * from mercado where idUsuario = $_SESSION[idUsuario]";
             $consulta = mysqli_query($con, $query);
             while($m = mysqli_fetch_array($consulta)){
                 $mercado = $m['nome'];
@@ -62,7 +62,10 @@
         ?>
 </select>
     </div>
+    </div>
     <div class="col-md-12">
     <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>
         </div>
 </form>
+<h3><strong>Caso não haja estabelecimentos disponíveis, clique <a href="CadastroDeEstabelecimento.php">aqui</a> para cadastrar</strong></h3>
+<!--<h3><strong>Caso não haja estabelecimentos disponíveis, clique <a href="https://bhome-residencial.000webhostapp.com/CadastroDeEstabelecimento.php">aqui</a> para cadastrar</strong></h3>-->

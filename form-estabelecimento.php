@@ -8,7 +8,7 @@
         </div>
          <div class="form-group col-md-6">
             <label for="validadeproduto">CEP</label>
-            <input type="text" onblur="pesquisacep(this.value);" class="form-control" id="validadeproduto" name="cep" id="cep" required>
+            <input type="number" onblur="pesquisacep(this.value);" class="form-control" id="validadeproduto" name="cep" id="cep" required>
         </div>
         <div class="form-group col-md-6">
             <label for="tipoproduto">Logradouro</label>

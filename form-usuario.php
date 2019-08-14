@@ -12,7 +12,7 @@ include('header.php');
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="nomeproduto">Nome</label>
-            <input type="text" maxlength="40"class="form-control" id="nomeproduto" placeholder="Nome" name="nome" required>
+            <input type="text" maxlength="40" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" class="form-control" id="nomeproduto" placeholder="Nome" name="nome" required>
         </div>
         <div class="form-group col-md-6">
             <label for="idade">Nascimento</label>
@@ -24,7 +24,7 @@ include('header.php');
         </div>
         <div class="form-group col-md-6">
             <label for="validadeproduto">login</label>
-            <input type="text" maxlength="15" class="form-control" id="login" placeholder="Digite seu login" name="login" required>
+            <input type="text" maxlength="15" class="form-control" pattern="[a-z]+$" id="login" placeholder="Digite seu login" name="login" required>
         </div>
         <div class="form-group col-md-6">
             <label for="dataproduto">Senha</label>

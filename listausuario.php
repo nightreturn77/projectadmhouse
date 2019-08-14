@@ -1,4 +1,17 @@
-<?php  include('header.php'); ?>
+<?php  include('header.php');
+if(isset($_SESSION['login'])){ 
+    if($_SESSION['tipoUsuario'] = 2 ){ 
+
+    }else{ 
+        echo '<script>window.location.href = "index.php";</script>';
+
+    }
+}else{
+    echo '<script>window.location.href = "acesso.php";</script>';
+
+}
+
+?>
 <div class="container-fluid" id="backpage">
 <table class="table">
 <h1 class="mt-4">Lista de Produtos</h1>
@@ -35,7 +48,7 @@ $situacao = $user['situacao'];
 
 echo "<tr><td>$id</td>
 <td>$nome</td>
-<td>$idade anos</td>
+<td>$idade</td>
 <td>$email</td>
 <td>$login</td>
 <td>$situacao</td>

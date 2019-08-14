@@ -72,6 +72,7 @@ $sqlproduto = "insert into produto(nome,tipo,preco,validade,dataCompra,quantidad
 values('$nome','$tipo','$preco','$validade','$dataCompra','$quantidade','$medida','$tipoMedida','$situacao','$idmercado','$produtoUsuario')"; 
 
 if(mysqli_query($con, $sqlproduto)){ 
+echo '<script>alert("Cadastrado com sucesso!")</script>';
 echo '<script>window.location.href = "CadastroDeProdutos.php";</script>';
 //echo '<script>window.location.href = "https://bhome-residencial.000webhostapp.com/CadastroDeProdutos.php";</script>';
 

@@ -23,11 +23,11 @@
         </div>
         <div class="form-group col-md-6">
             <label for="validadeproduto">Validade</label>
-            <input type="date" class="form-control" id="validadeproduto" name="validade" required>
+            <input type="date" class="form-control" id="validadeproduto" name="validade">
         </div>
         <div class="form-group col-md-6">
             <label for="dataproduto">Data da Compra</label>
-            <input type="date" class="form-control" id="dataproduto" name="dataCompra" required>
+            <input type="date" class="form-control" id="dataproduto" name="dataCompra">
         </div>
         <div class="form-group col-md-6">
             <label for="dataproduto">Quantidade</label>

@@ -7,7 +7,7 @@ include('header.php');
 
 ?>
 
-<div class="container">
+<div class="container-fluid">
 
 <h1>Desenvolvido por:</h1>
 <p>Victor Dias Caselli Porto</p>

@@ -18,7 +18,7 @@
     <title>Banco Home</title>
 </head>
 
-<body class="container">
+<body class="container-fluid">
     <div class="cover">
         <a href="index.php"><img class="rounded mx-auto d-block" src="img/logo2.png" alt="logo.jpg"
                 title="Banco Home" />
@@ -119,4 +119,4 @@
             </div>
         </div>
     </div>
-    <div class="container cover container2" id="corpo">
+    <div class="container-fluid cover container2" id="corpo">

@@ -18,6 +18,6 @@ echo '<form action="deletarUsuarioBanco.php" method="POST">
 </div>
 <div class="col-md-12">
 <button type="submit" class="btn btn-primary" name="cadastrar">Deletar</button>
-<div>';
+</div></form>';
 include('footer.php');
 ?>

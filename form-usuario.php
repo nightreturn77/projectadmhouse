@@ -15,8 +15,8 @@ include('header.php');
             <input type="text" maxlength="40"class="form-control" id="nomeproduto" placeholder="Nome" name="nome" required>
         </div>
         <div class="form-group col-md-6">
-            <label for="idade">Idade</label>
-            <input type="number"  class="form-control" id="idade" placeholder="Digite sua idade" name="idade" required>
+            <label for="idade">Nascimento</label>
+            <input type="date"  class="form-control" id="idade" placeholder="Digite sua idade" name="idade" required>
         </div>
         <div class="form-group col-md-6">
             <label for="precoproduto">Email</label>
@@ -24,7 +24,7 @@ include('header.php');
         </div>
         <div class="form-group col-md-6">
             <label for="validadeproduto">login</label>
-            <input type="text" class="form-control" id="login" placeholder="Digite seu login" name="login" required>
+            <input type="text" maxlength="15" class="form-control" id="login" placeholder="Digite seu login" name="login" required>
         </div>
         <div class="form-group col-md-6">
             <label for="dataproduto">Senha</label>
